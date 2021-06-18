@@ -11,12 +11,12 @@
         <!-- 검색 Grid -->
         <Grid HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="612">
             <Border BorderBrush="Black" BorderThickness="2" Height="57" VerticalAlignment="Top" Margin="0,0,-2,0"/>
-            
+
             <!-- targetServer : 검색 대상 서버, targetLevel : 검색 대상 템렙, nicknameInput : 검색 대상 닉네임(Input)-->
             <TextBlock TextWrapping="Wrap" Text="아브렐슈드" Name="targetServer" FontSize="24" Margin="10,0,482,362" TextAlignment="Right" VerticalAlignment="Center" FontWeight="Bold"/>
             <TextBlock TextWrapping="Wrap" Text="1575.00" x:Name="targetLevel" FontSize="24" Margin="135,0,387,362" TextAlignment="Left" Foreground="#FFFF8000" VerticalAlignment="Center" FontWeight="Bold"/>
             <TextBox TextWrapping="Wrap" Name="nicknameInput" Text="닉네임을 입력해주세요" FontSize="24" Margin="232,10,120,372" BorderBrush="Black" BorderThickness="1" TextAlignment="Right"/>
-            <Button Content="검색" Margin="500,10,10,372" BorderBrush="Black" Background="#FF939393" FontWeight="Bold"/>
+            <Button Content="검색" Margin="500,10,10,372" BorderBrush="Black" Background="#FF939393" FontWeight="Bold" Click="searchTarget"/>
         </Grid>
 
         <!-- 요약 Grid -->
@@ -25,12 +25,41 @@
         </Grid>
 
         <!-- 상세 Grid -->
-        <Grid HorizontalAlignment="Left" Height="362" Margin="0,57,0,0" VerticalAlignment="Top" Width="612">
-            <Border BorderBrush="Black" BorderThickness="2" Margin="0,-2,-2,0" Background="#FFE2E2E2">
-                <Expander Header="Expander">
-
-                </Expander>
-            </Border>
+        <!-- 섬마 -->
+        <Grid HorizontalAlignment="Left" Height="362" Margin="0,57,0,0" VerticalAlignment="Top" Width="612" Background="#FFC1C1C1">
+            <Border BorderBrush="Black" BorderThickness="2" Margin="0,-2,-2,0"/>
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <WrapPanel>
+                    <!--섬마 정리는 https://www.inven.co.kr/board/lostark/4821/66686 를 참조 했습니다.-->
+                    <Expander Header="섬의 마음(0/95)" x:Name="islandExpander" Expanded="islandExpanded" IsExpanded="True" Width="614" BorderBrush="Black">
+                        <WrapPanel>
+                            <Expander Header="호감도(0/10)" x:Name="IslandFavorExpander" IsExpanded="True" Width="614">
+                                <WrapPanel>
+                                    <Button Name="Btn_MOI_Libeheim" Content=" 1. 리베하임" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Panda" Content=" 2. 판다 푸푸 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_WhiteWave" Content=" 3. 하얀 파도 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Jigo" Content=" 4. 지고의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_TotoSilver" Content=" 5. 토토실버 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Hiphonos" Content=" 6. 히프노스의 눈" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Hwanjukdo" Content=" 7. 환죽도" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_BlackTooth" Content=" 8. 검은 이빨의 주둔지" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Mari" Content=" 9. 고립된 영원의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Ninav" Content=" 10. 속삭이는 작은 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                </WrapPanel>
+                            </Expander>
+                            <Expander Header="퀘스트(0/21)" x:Name="islandQuestExpander" IsExpanded="True" Width="614">
+                                <WrapPanel>
+                                    <Button Name="Btn_MOI_BrokenIce" Content=" 1. 부서진 빙하의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Bikini" Content=" 2. 비키니 아일랜드" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Oper" Content=" 3. 외로운 섬 오페르" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_StarLightHouse" Content=" 4. 별빛 등대의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Goyo" Content=" 5. 고요의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                </WrapPanel>
+                            </Expander>
+                        </WrapPanel>
+                    </Expander>
+                </WrapPanel>
+            </ScrollViewer>
         </Grid>
     </Grid>
 </Window>
