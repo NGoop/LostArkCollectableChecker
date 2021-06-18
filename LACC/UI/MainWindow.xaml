@@ -1,9 +1,9 @@
-﻿<Window x:Class="LACC.MainWindow"
+﻿<Window x:Class="LACC.UI.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:LACC"
+        xmlns:local="clr-namespace:LACC.UI"
         mc:Ignorable="d"
         Title="LostArk Collectable Checker" Height="450" Width="920">
     <Grid Margin="0,0,2,0">
@@ -28,7 +28,6 @@
         <Grid HorizontalAlignment="Left" Height="362" Margin="0,57,0,0" VerticalAlignment="Top" Width="612">
             <Border BorderBrush="Black" BorderThickness="2" Margin="0,-2,-2,0" Background="#FFE2E2E2">
                 <Expander Header="Expander">
-                    <TextBlock Text="HI, I'm expander"></TextBlock>
 
                 </Expander>
             </Border>
