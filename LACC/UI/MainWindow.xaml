@@ -27,39 +27,134 @@
         <!-- 상세 Grid -->
         <!-- 섬마 -->
         <Grid HorizontalAlignment="Left" Height="362" Margin="0,57,0,0" VerticalAlignment="Top" Width="612" Background="#FFC1C1C1">
-            <Border BorderBrush="Black" BorderThickness="2" Margin="0,-2,-2,0"/>
             <ScrollViewer VerticalScrollBarVisibility="Auto">
                 <WrapPanel>
                     <!--섬마 정리는 https://www.inven.co.kr/board/lostark/4821/66686 를 참조 했습니다.-->
-                    <Expander Header="섬의 마음(0/95)" x:Name="islandExpander" Expanded="islandExpanded" IsExpanded="True" Width="614" BorderBrush="Black">
+                    <Expander Header="섬의 마음(0/94)" x:Name="islandExpander" Expanded="islandExpanded" IsExpanded="True" Width="614" BorderBrush="Black">
                         <WrapPanel>
-                            <Expander Header="호감도(0/10)" x:Name="IslandFavorExpander" IsExpanded="True" Width="614">
+                            <Expander Header="호감도(0/10)" x:Name="IslandFavorExpander" IsExpanded="False" Width="614">
                                 <WrapPanel>
-                                    <Button Name="Btn_MOI_Libeheim" Content=" 1. 리베하임" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
-                                    <Button Name="Btn_MOI_Panda" Content=" 2. 판다 푸푸 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
-                                    <Button Name="Btn_MOI_WhiteWave" Content=" 3. 하얀 파도 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
-                                    <Button Name="Btn_MOI_Jigo" Content=" 4. 지고의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
-                                    <Button Name="Btn_MOI_TotoSilver" Content=" 5. 토토실버 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
-                                    <Button Name="Btn_MOI_Hiphonos" Content=" 6. 히프노스의 눈" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
-                                    <Button Name="Btn_MOI_Hwanjukdo" Content=" 7. 환죽도" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
-                                    <Button Name="Btn_MOI_BlackTooth" Content=" 8. 검은 이빨의 주둔지" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
-                                    <Button Name="Btn_MOI_Mari" Content=" 9. 고립된 영원의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
-                                    <Button Name="Btn_MOI_Ninav" Content=" 10. 속삭이는 작은 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Favor_01" Content=" 1. 리베하임" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Favor_02" Content=" 2. 판다 푸푸 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Favor_03" Content=" 3. 하얀 파도 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Favor_04" Content=" 4. 지고의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Favor_05" Content=" 5. 토토실버 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Favor_06" Content=" 6. 히프노스의 눈" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Favor_07" Content=" 7. 환죽도" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Favor_08" Content=" 8. 검은 이빨의 주둔지" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Favor_09" Content=" 9. 고립된 영원의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Favor_10" Content=" 10. 속삭이는 작은 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
                                 </WrapPanel>
                             </Expander>
-                            <Expander Header="퀘스트(0/21)" x:Name="islandQuestExpander" IsExpanded="True" Width="614">
+                            <Expander Header="퀘스트(0/22)" x:Name="islandQuestExpander" IsExpanded="False" Width="614">
                                 <WrapPanel>
-                                    <Button Name="Btn_MOI_BrokenIce" Content=" 1. 부서진 빙하의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
-                                    <Button Name="Btn_MOI_Bikini" Content=" 2. 비키니 아일랜드" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
-                                    <Button Name="Btn_MOI_Oper" Content=" 3. 외로운 섬 오페르" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
-                                    <Button Name="Btn_MOI_StarLightHouse" Content=" 4. 별빛 등대의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
-                                    <Button Name="Btn_MOI_Goyo" Content=" 5. 고요의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Quest_01" Content=" 1. 부서진 빙하의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Quest_02" Content=" 2. 비키니 아일랜드" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Quest_03" Content=" 3. 외로운 섬 오페르" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Quest_04" Content=" 4. 별빛 등대의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Quest_05" Content=" 5. 고요의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Quest_06" Content=" 6. 회상의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Quest_07" Content=" 7. 얼음 미로의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Quest_08" Content=" 8. 휴양지 그라비스" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Quest_09" Content=" 9. 꿈꾸는 갈매기 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Quest_10" Content=" 10. 안개의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Quest_11" Content=" 11. 왜곡된 차원의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Quest_12" Content=" 12. 희망의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Quest_13" Content=" 13. 나루니 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Quest_14" Content=" 14. 포모나 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Quest_15" Content=" 15. 카마인의 주둔지" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Quest_16" Content=" 16. 기약의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Quest_17" Content=" 17. 수라도" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Quest_18" Content=" 18. 거북 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Quest_19" Content=" 19. 푸른 바람의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Quest_20" Content=" 20. 메투스 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Quest_21" Content=" 21. 두키 주식회사" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Quest_22" Content=" 22. 그림자의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                </WrapPanel>
+                            </Expander>
+                            <Expander Header="에포나 관련 (0/13)" x:Name="IslandEponaExpander" IsExpanded="False" Width="614">
+                                <WrapPanel>
+                                    <Button Name="Btn_MOI_Epona_01" Content=" 1. 해상 낙원 페이토" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Epona_02" Content=" 2. 도망자들의 마을" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Epona_03" Content=" 3. 노토스 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Epona_04" Content=" 4. 클럽 아비뉴" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Epona_05" Content=" 5. 토토피아" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Epona_06" Content=" 6. 몽환의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Epona_07" Content=" 7. 지스브로이" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Epona_08" Content=" 8. 로팡 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Epona_09" Content=" 9. 그림자 달 시장" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Epona_10" Content=" 10. 아트로포스" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Epona_11" Content=" 11. 고블린 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Epona_12" Content=" 12. 이스테르" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Epona_13" Content=" 13. 모코모코 야시장" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                </WrapPanel>
+                            </Expander>
+                            <Expander Header="보스 드랍 (0/19)" x:Name="IslandBossDropExpander" IsExpanded="False" Width="614">
+                                <WrapPanel>
+                                    <Button Name="Btn_MOI_Boss_01" Content=" 1. 비밀기지 X-301" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Boss_02" Content=" 2. 황혼의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Boss_03" Content=" 3. 세월의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Boss_04" Content=" 4. 발푸르기스" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Boss_05" Content=" 5. 비탄의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Boss_06" Content=" 6. 알라케르" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Boss_07" Content=" 7. 스피다 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Boss_08" Content=" 8. 에라스모의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Boss_09" Content=" 9. 미지의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Boss_10" Content=" 10. 두키 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Boss_11" Content=" 11. 포르페" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Boss_12" Content=" 12. 죽음의 협곡" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Boss_13" Content=" 13. 블루홀 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Boss_14" Content=" 14. 환영 나비 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Boss_15" Content=" 15. 오르비스 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Boss_16" Content=" 16. 얼음과 불의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Boss_17" Content=" 17. 격류의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Boss_18" Content=" 18. 알트아이젠" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Boss_19" Content=" 19. 에버그레이스의 둥지" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                </WrapPanel>
+                            </Expander>
+                            <Expander Header="수집형 (0/8)" x:Name="IslandCollectExpander" IsExpanded="False" Width="614">
+                                <WrapPanel>
+                                    <Button Name="Btn_MOI_Collect_01" Content=" 1. 해바라기의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Collect_02" Content=" 2. 해적마을 아틀라스" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Collect_03" Content=" 3. 자유의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Collect_04" Content=" 4. 신월의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Collect_05" Content=" 5. 지혜의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Collect_06" Content=" 6. 지혜의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Collect_07" Content=" 7. 그릇된 욕망의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Collect_08" Content=" 8. 무릉 도원" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                </WrapPanel>
+                            </Expander>
+                            <Expander Header="가챠형 (0/22)" x:Name="IslandPercentExpander" IsExpanded="False" Width="614">
+                                <WrapPanel>
+                                    <Button Name="Btn_MOI_Perc_01" Content=" 1. 갈망의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Perc_02" Content=" 2. 칼트헤르츠" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Perc_03" Content=" 3. 무법자의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Perc_04" Content=" 4. 작은 행운의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Perc_05" Content=" 5. 우거진 갈대의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Perc_06" Content=" 6. 에스텔라" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Perc_07" Content=" 7. 황금 물결 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Perc_08" Content=" 8. 환각의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Perc_09" Content=" 9. 잊혀진 자들의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Perc_10" Content=" 10. 볼라르 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Perc_11" Content=" 11. 메데이아" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Perc_12" Content=" 12. 기회의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Perc_13" Content=" 13. 고요한 안식의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Perc_14" Content=" 14. 몬테 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Perc_15" Content=" 15. 바다의 요람 페르마타" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Perc_16" Content=" 16. 하모니 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Perc_17" Content=" 17. 잠자는 노래의 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Perc_18" Content=" 18. 포르투나" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Perc_19" Content=" 19. 거대 버섯 섬" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Perc_20" Content=" 20. 슬라임 아일랜드" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Perc_21" Content=" 21. 쿵덕쿵 아일랜드" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
+                                    <Button Name="Btn_MOI_Perc_22" Content=" 22. 스노우팡 아일랜드" Margin="0,0,-4,0" Height="30" HorizontalContentAlignment="Left" FontWeight="Bold" Width="593" Click="GetMoreInfo"/>
                                 </WrapPanel>
                             </Expander>
                         </WrapPanel>
                     </Expander>
                 </WrapPanel>
             </ScrollViewer>
+            <Border BorderBrush="Black" BorderThickness="2" Margin="0,-2,-2,0"/>
         </Grid>
     </Grid>
 </Window>
